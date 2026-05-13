@@ -1,0 +1,30 @@
+{
+  "version": "2.0",
+  "dataset_id": "on004588",
+  "source": "openneuro",
+  "source_id": "ds004588",
+  "title": "Neuma",
+  "authors": {
+    "Kostas Georgiadis": {},
+    "Fotis P. Kalaganis": {},
+    "Kyriakos Riskos": {},
+    "Eleytheria Matta": {},
+    "Vangelis P. Oikonomou": {},
+    "Yfantidou Ioanna": {},
+    "Dimitris Chantziaras": {},
+    "Kyriakos Pantouvakis": {},
+    "Spiros Nikolopoulos": {},
+    "Nikos A. Laskaris": {},
+    "Ioannis Kompatsiaris": {}
+  },
+  "license": "CC0",
+  "dataset_type": "raw",
+  "related_identifiers": [
+    {
+      "identifier": "10.18112/openneuro.ds004588.v1.2.0",
+      "identifier_type": "DOI",
+      "relation_type": "IsIdenticalTo"
+    }
+  ],
+  "pipeline_stage": "seeded"
+}
