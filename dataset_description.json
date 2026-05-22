@@ -14,9 +14,7 @@
     "Nikos A. Laskaris",
     "Ioannis Kompatsiaris"
   ],
-  "ReferencesAndLinks": [
-    ""
-  ],
+  "ReferencesAndLinks": [],
   "BIDSVersion": "1.8.0",
   "HEDVersion": "8.1.0",
   "DatasetDOI": "10.82901/nemar.on004588",
@@ -25,5 +23,13 @@
       "DOI": "doi:10.18112/openneuro.ds004588.v1.2.0"
     }
   ],
-  "Version": "1.0.0"
+  "Version": "1.0.2",
+  "DatasetType": "raw",
+  "GeneratedBy": [
+    {
+      "Name": "nemar-cli",
+      "Version": "0.8.8",
+      "CodeURL": "https://github.com/nemar-org/nemar-cli"
+    }
+  ]
 }
