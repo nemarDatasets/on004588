@@ -1,9 +1,9 @@
 {
   "version": "2.0",
-  "dataset_id": "on004588",
-  "source": "openneuro",
-  "source_id": "ds004588",
+  "pipeline_stage": "validated",
   "title": "Neuma",
+  "license": "CC0",
+  "dataset_type": "raw",
   "authors": {
     "Kostas Georgiadis": {},
     "Fotis P. Kalaganis": {},
@@ -17,14 +17,60 @@
     "Nikos A. Laskaris": {},
     "Ioannis Kompatsiaris": {}
   },
-  "license": "CC0",
-  "dataset_type": "raw",
   "related_identifiers": [
     {
       "identifier": "10.18112/openneuro.ds004588.v1.2.0",
       "identifier_type": "DOI",
-      "relation_type": "IsIdenticalTo"
+      "relation_type": "IsDerivedFrom"
+    },
+    {
+      "identifier": "https://github.com/nemarDatasets/on004588",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
+    },
+    {
+      "identifier": "https://nemar.org/dataexplorer/detail?dataset_id=on004588",
+      "identifier_type": "URL",
+      "relation_type": "IsDescribedBy"
     }
   ],
-  "pipeline_stage": "seeded"
+  "modalities": [
+    "eeg"
+  ],
+  "resource_type_specific": "EEG Dataset",
+  "sizes": [
+    "630.6 MB (212 files)"
+  ],
+  "formats": [
+    ".fdt",
+    ".json",
+    ".md",
+    ".set",
+    ".tsv",
+    ".xlsx",
+    ".yml"
+  ],
+  "description": "NeuMa is a multimodal neuromarketing dataset comprising simultaneous EEG, eye tracking, and behavioral recordings from 42 participants during an advertising brochure-browsing task. Participants viewed supermarket brochures and selected products they intended to purchase while their neural activity, gaze patterns, mouse interactions, and demographic/product preferences were recorded. This dataset integrates neurophysiological and behavioral measures to investigate consumer decision-making processes.",
+  "methods_description": "Data collection included concurrent EEG recordings, eye tracking, questionnaire responses (demographic, profiling, and product-related), and computer mouse tracking during a supermarket brochure-browsing scenario where participants selected products for purchase.",
+  "keywords": [
+    {
+      "term": "EEG"
+    },
+    {
+      "term": "eye tracking"
+    },
+    {
+      "term": "neuromarketing"
+    },
+    {
+      "term": "consumer behavior"
+    },
+    {
+      "term": "multimodal neuroimaging"
+    },
+    {
+      "term": "decision-making"
+    }
+  ],
+  "source_hash": "4df8bfba9b44d6aa85973259a9c3fb49e38dffd1808f0b1319daa55b15cd05eb"
 }
