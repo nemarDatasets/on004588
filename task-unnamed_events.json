@@ -1,1 +1,8 @@
-[]
+{
+  "sample": {
+    "Description": "Event sample index (0-based)."
+  },
+  "value": {
+    "Description": "Free-form event label as recorded in the source acquisition. Observed labels include keyboard / mouse / mouse-wheel events (e.g. 'MouseButtonLeft pressed', 'MouseButtonLeft released', 'MouseWheelDown120 pressed')."
+  }
+}
