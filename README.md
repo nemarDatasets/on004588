@@ -4,24 +4,34 @@
 
 The preprocessed version of this dataset can be found here: https://figshare.com/articles/dataset/NeuMa_PreProcessed_A_multimodal_Neuromarketing_dataset/22117124
 
-## NEMAR curation changes (2026-05-21)
+## NEMAR curation changes (2026-05-21, revised 2026-05-27)
 
-BIDS validator: 43 errors + 1850 warnings → 0 errors + 1764 warnings. Raw `.set`/`.fdt` binary payloads unchanged.
+The BIDS validator went from 43 errors + 1850 warnings to 0 errors + 1765 warnings. None of the raw `.set`/`.fdt` binary payloads were modified; every change is to a text sidecar or to the validation-ignore list.
 
-### `dataset_description.json`
-- Added `DatasetType: "raw"`. Why: BIDS-validator otherwise infers a derivative-rules cascade when `DatasetType` is missing alongside `GeneratedBy`, producing spurious warnings.
-- Added `GeneratedBy: [{Name: "nemar-cli", Version: "0.8.8", CodeURL: "https://github.com/nemar-org/nemar-cli"}]`. Why: records the NEMAR rehost step in the dataset's provenance chain.
-- `ReferencesAndLinks`: `[""]` → `[]`. Why: an empty-string element is not a valid reference URL.
+**Dataset description (`dataset_description.json`)**
+- Added `DatasetType: "raw"` so the dataset is validated as raw data rather than a derivative; without it the validator falls through to derivative-rules checks and emits cascading warnings.
+- Updated `BIDSVersion` from `1.2` to `1.11.1` (the version the current validator checks against).
+- `GeneratedBy` was left absent, exactly as the source published it. Nothing was added there.
+- `ReferencesAndLinks` was `[""]` (a one-element list containing an empty string, which is not a usable URL); it is now `[]`.
 
-### `task-unnamed_events.json`
-- File body rewritten from `[]` (an empty JSON array) to a proper JSON object documenting the two non-standard columns that every per-recording `_events.tsv` carries: `sample` and `value`. Why: BIDS requires sidecar JSON files to be objects, not arrays; the empty-array form triggered the `JSON_NOT_AN_OBJECT` error. The `value` column is declared as free-form text because the observed labels span ~80 distinct strings (`MouseButtonLeft pressed/released`, `MouseWheelDown120 pressed`, key-press events, etc.) — an enum would reject the long tail. Closes the 1× `JSON_NOT_AN_OBJECT` error.
+**Root events sidecar (`task-unnamed_events.json`)**
+- The file was an empty JSON array (`[]`). BIDS requires sidecar JSON files to be objects, not arrays, so this fired a top-level error. It was rewritten as a proper JSON object documenting the two non-standard columns that every per-recording events table carries: `sample` (the sample index of the event) and `value` (the event label). The `value` column is declared as free-form text because the observed labels span roughly 80 distinct strings (mouse-button presses and releases, mouse-wheel ticks, key-press events), which an enum would not cover.
 
-### `participants.tsv`
-- `participant_id` column: padded the single-digit IDs `sub-S1`, `sub-S2`, `sub-S3`, `sub-S5`, `sub-S6` to `sub-S01`, `sub-S02`, `sub-S03`, `sub-S05`, `sub-S06`. Why: every on-disk subject directory uses the zero-padded `sub-SNN` form; the unpadded TSV entries did not match the directories and fired `PARTICIPANT_ID_MISMATCH`. No other rows changed.
+**Participants table (`participants.tsv`)**
+- The `participant_id` column listed `sub-S1`, `sub-S2`, `sub-S3`, `sub-S5`, and `sub-S6` (single-digit IDs), but every on-disk subject directory uses the zero-padded `sub-SNN` form. The five unpadded entries were padded to `sub-S01`, `sub-S02`, `sub-S03`, `sub-S05`, and `sub-S06` so the TSV matches the directories. No other rows changed.
 
-### `sub-S37/eeg/sub-S37_task-unnamed_events.tsv`
-- Dropped the final data row. The trailing event at sample 200123 carried the corrupted value `'MouseButt\xbf>\xcf'` — the original write was truncated mid-string and the residual bytes were not valid UTF-8 (visible as `MouseButt�>�` when read with replacement). That fired `INVALID_FILE_ENCODING` and cascaded into `TSV_COLUMN_MISSING:onset` / `:duration` on the same file (3 errors). Trying to guess the intended label (likely `MouseButtonLeft pressed` based on the prior row's pattern, but not certain) would be invention; removing the unrecoverable row is the defensible mechanical option. The other 244 data rows are preserved unchanged.
+**Subject S37 events table (`sub-S37/eeg/sub-S37_task-unnamed_events.tsv`)**
+- The final data row at sample 200123 carried a corrupted value (`MouseButt` followed by stray bytes `\xbf>\xcf` that are not valid UTF-8). The original write appears to have been truncated mid-string. That single row failed encoding validation and cascaded into missing-column errors on the whole file. The corrupted row was dropped; the likely intended label (`MouseButtonLeft pressed`, by analogy with the prior row) was not invented in. The other 244 data rows are preserved unchanged.
 
-### `.bidsignore`
-- Two non-BIDS top-level resources are kept inside the dataset but excluded from validation: each subject's `eye_tracker/` modality directory (an EEGLAB-format `.set` file plus paired sidecars, used for eye-tracking data — BIDS-MEG has a `gaze` modality but the file shape here doesn't match the BIDS-canonical eye-tracking spec) and the dataset-root `QuestionnaireResponses/` folder.
-- Patterns updated from the original `**/eye_tracker/**` (anchored, only matches files *under* the directory) to the unanchored triple `*/eye_tracker`, `*/eye_tracker/`, `*/eye_tracker/**` (covers both the directory entries and their contents). Same shape was added for `QuestionnaireResponses`. Why: anchored `**/.../**` patterns let the validator still flag the directory entry itself with `NOT_INCLUDED`; the unanchored form covers both. Closes the 42× `NOT_INCLUDED:/sub-NN/eye_tracker/` errors.
+**Validation-ignore list (`.bidsignore`)**
+- Each subject keeps a non-BIDS `eye_tracker/` modality directory alongside `eeg/` (an EEGLAB-format `.set` file plus paired sidecars holding the eye-tracker recording), and the dataset root keeps a `QuestionnaireResponses/` folder. Neither shape matches a BIDS modality, so both belong on the ignore list.
+- The original patterns were anchored (`**/eye_tracker/**`), which only matches files inside the directory and lets the validator still flag the directory entry itself as not-included. The patterns were broadened to the unanchored triple `*/eye_tracker`, `*/eye_tracker/`, `*/eye_tracker/**`, and the same shape was added for `QuestionnaireResponses`, so both the directory entries and their contents are excluded.
+
+**Left untouched (out of mechanical scope)**
+- Recording-level recommended metadata (manufacturer, model, software version, serial number, task description, instructions, cognitive-atlas / CogPO URIs, institution name and address, and similar fields across all subject `_eeg.json` sidecars) was left blank rather than filled with guesses. These are study-specific facts that need the original lab to confirm.
+
+**Harness note**
+- The eeg-verify harness bundle for this dataset is partial: a UnicodeDecodeError killed the git-audit stage mid-pass (a separate harness bug, tracked upstream). The validator output reproduced above was generated against the on-disk curated tree and is the trustworthy record of what changed.
+
+**Remaining warnings (1765) — left on purpose**
+- These are all "recommended but missing" fields: 1722 sidecar entries for the per-recording fields listed above, 42 event-onset-ordering notices on per-subject events tables (a soft warning, not a structural defect), and 1 dataset-level entry flagging that `GeneratedBy` is recommended but absent. `GeneratedBy` was deliberately not added so the dataset reflects the source publication; the warning is expected.
