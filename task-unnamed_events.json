@@ -1,1 +1,25 @@
-[]
+{
+  "sample": {
+    "Description": "Event sample index (0-based)."
+  },
+  "value": {
+    "Description": "Verbatim event label as recorded in the source acquisition. Three vocabularies appear: stimulus presentation strings of form 'Category:IMG=ID:<file>=Type:<category>' (e.g. 'Category:IMG=ID:FYLLADIO_1.tif=Type:Leaflet_Images_1'), mouse / mouse-wheel events of form '<device> <action>' (e.g. 'MouseButtonLeft pressed', 'MouseWheelDown120 pressed'), and atomic trial markers ('fixation_cross', 'EOE')."
+  },
+  "event_class": {
+    "LongName": "Event class",
+    "Description": "Class label derived from `value`. 'stimulus' rows are image presentations; 'response' rows are mouse or mouse-wheel events; 'marker' rows are atomic trial markers (fixation_cross at trial start, EOE at experiment end).",
+    "Levels": {
+      "stimulus": "Image presentation event; structured `value` of form 'Category:IMG=ID:<file>=Type:<category>'.",
+      "response": "Mouse or mouse-wheel input event; `value` of form '<device> <action>' (e.g. 'MouseButtonLeft pressed').",
+      "marker": "Atomic trial-structure marker (fixation_cross, EOE)."
+    }
+  },
+  "stim_id": {
+    "LongName": "Stimulus identifier",
+    "Description": "For `event_class=stimulus` rows, the filename captured from the `ID:` field of `value` (e.g. 'FYLLADIO_1.tif'). 'n/a' for response and marker rows."
+  },
+  "stim_category": {
+    "LongName": "Stimulus category",
+    "Description": "For `event_class=stimulus` rows, the category label captured from the `Type:` field of `value` (e.g. 'Leaflet_Images_1'). 'n/a' for response and marker rows."
+  }
+}
