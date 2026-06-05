@@ -46,5 +46,3 @@ Maintainer feedback (Arno) asked for the `value` column to be split into structu
 - everything else (`fixation_cross`, `EOE`) → `event_class=marker`, `stim_id=n/a`, `stim_category=n/a` (168 rows).
 
 Total: 4811 rows touched across 84 files. Every new cell is either a literal substring of the original `value` or a class label that follows unambiguously from the regex match — no semantic interpretation, no invented metadata. Binary `.set`/`.fdt` payloads remain byte-identical.
-
-**`dataset_description.json`** — `Version` bumped `1.0.2` → `1.0.3`.
