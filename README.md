@@ -35,3 +35,16 @@ The BIDS validator went from 43 errors + 1850 warnings to 0 errors + 1765 warnin
 
 **Remaining warnings (1765) — left on purpose**
 - These are all "recommended but missing" fields: 1722 sidecar entries for the per-recording fields listed above, 42 event-onset-ordering notices on per-subject events tables (a soft warning, not a structural defect), and 1 dataset-level entry flagging that `GeneratedBy` is recommended but absent. `GeneratedBy` was deliberately not added so the dataset reflects the source publication; the warning is expected.
+
+## NEMAR curation changes (2026-06-05): event-column split
+
+Maintainer feedback (Arno) asked for the `value` column to be split into structured columns. The source `value` field carries three vocabularies, each with internal structure that can be parsed mechanically. Three new columns were added to every `*_events.tsv` (84 files: 42 subjects × 2 modalities — `eeg/` and `eye_tracker/`); the original `value` column is preserved verbatim alongside them. `task-unnamed_events.json` was updated to document the three new columns.
+
+**Per-row classification (purely a regex parse of the source `value`):**
+- `Category:IMG=ID:<file>=Type:<category>` → `event_class=stimulus`, `stim_id=<file>`, `stim_category=<category>` (902 rows across the dataset).
+- `Mouse...` or `Wheel...` → `event_class=response`, `stim_id=n/a`, `stim_category=n/a` (3741 rows; the verbatim `value` already carries the `<device> <action>` pair, so it is not re-split into separate columns).
+- everything else (`fixation_cross`, `EOE`) → `event_class=marker`, `stim_id=n/a`, `stim_category=n/a` (168 rows).
+
+Total: 4811 rows touched across 84 files. Every new cell is either a literal substring of the original `value` or a class label that follows unambiguously from the regex match — no semantic interpretation, no invented metadata. Binary `.set`/`.fdt` payloads remain byte-identical.
+
+**`dataset_description.json`** — `Version` bumped `1.0.2` → `1.0.3`.
