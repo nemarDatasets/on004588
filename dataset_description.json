@@ -14,10 +14,8 @@
     "Nikos A. Laskaris",
     "Ioannis Kompatsiaris"
   ],
-  "ReferencesAndLinks": [
-    ""
-  ],
-  "BIDSVersion": "1.8.0",
+  "ReferencesAndLinks": [],
+  "BIDSVersion": "1.11.1",
   "HEDVersion": "8.1.0",
   "DatasetDOI": "10.82901/nemar.on004588",
   "SourceDatasets": [
@@ -25,5 +23,6 @@
       "DOI": "doi:10.18112/openneuro.ds004588.v1.2.0"
     }
   ],
-  "Version": "1.0.0"
+  "Version": "1.0.2",
+  "DatasetType": "raw"
 }

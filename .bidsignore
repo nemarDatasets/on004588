@@ -1,2 +1,7 @@
-**/eye_tracker/**
-QuestionnaireResponses		.nemar/
+*/eye_tracker
+*/eye_tracker/
+*/eye_tracker/**
+QuestionnaireResponses
+QuestionnaireResponses/
+QuestionnaireResponses/**
+.nemar/
