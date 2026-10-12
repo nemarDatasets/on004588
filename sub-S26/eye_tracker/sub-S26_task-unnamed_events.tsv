@@ -1,80 +1,80 @@
-onset	duration	sample	value
-135.0250000000	1.0000000000	16203	MouseButtonLeft pressed
-135.1000000000	1.0000000000	16212	MouseButtonLeft released
-151.4416666667	1.0000000000	18173	MouseButtonLeft pressed
-151.5250000000	1.0000000000	18183	MouseButtonLeft released
-155.8666666667	1.0000000000	18704	MouseButtonLeft pressed
-156.0000000000	1.0000000000	18720	MouseButtonLeft released
-157.1333333333	1.0000000000	18856	MouseButtonLeft pressed
-157.2583333333	1.0000000000	18871	MouseButtonLeft released
-163.4166666667	1.0000000000	19610	MouseButtonLeft pressed
-163.5583333333	1.0000000000	19627	MouseButtonLeft released
-167.5666666667	1.0000000000	20108	MouseButtonLeft pressed
-167.6916666667	1.0000000000	20123	MouseButtonLeft released
-173.0000000000	1.0000000000	20760	MouseButtonLeft pressed
-173.1083333333	1.0000000000	20773	MouseButtonLeft released
-180.0666666667	1.0000000000	21608	MouseButtonLeft pressed
-180.1833333333	1.0000000000	21622	MouseButtonLeft released
-183.1916666667	1.0000000000	21983	MouseButtonLeft pressed
-183.2833333333	1.0000000000	21994	MouseButtonLeft released
-183.7916666667	1.0000000000	22055	MouseButtonLeft pressed
-183.8583333333	1.0000000000	22063	MouseButtonLeft released
-184.3833333333	1.0000000000	22126	MouseButtonLeft pressed
-184.4833333333	1.0000000000	22138	MouseButtonLeft released
-189.3583333333	1.0000000000	22723	MouseButtonLeft pressed
-189.5083333333	1.0000000000	22741	MouseButtonLeft released
-191.2416666667	1.0000000000	22949	MouseButtonLeft pressed
-191.3583333333	1.0000000000	22963	MouseButtonLeft released
-195.1166666667	1.0000000000	23414	MouseButtonLeft pressed
-195.2250000000	1.0000000000	23427	MouseButtonLeft released
-196.8500000000	1.0000000000	23622	MouseButtonLeft pressed
-196.9583333333	1.0000000000	23635	MouseButtonLeft released
-199.6666666667	1.0000000000	23960	MouseButtonLeft pressed
-199.7750000000	1.0000000000	23973	MouseButtonLeft released
-200.4000000000	1.0000000000	24048	MouseButtonLeft pressed
-200.4750000000	1.0000000000	24057	MouseButtonLeft released
-200.9916666667	1.0000000000	24119	MouseButtonLeft pressed
-201.0833333333	1.0000000000	24130	MouseButtonLeft released
-205.2333333333	1.0000000000	24628	MouseButtonLeft pressed
-205.3416666667	1.0000000000	24641	MouseButtonLeft released
-210.6750000000	1.0000000000	25281	MouseButtonLeft pressed
-210.8416666667	1.0000000000	25301	MouseButtonLeft released
-213.7750000000	1.0000000000	25653	MouseButtonLeft pressed
-213.9000000000	1.0000000000	25668	MouseButtonLeft released
-217.9333333333	1.0000000000	26152	MouseButtonLeft pressed
-218.0583333333	1.0000000000	26167	MouseButtonLeft released
-221.8666666667	1.0000000000	26624	MouseButtonLeft pressed
-222.0166666667	1.0000000000	26642	MouseButtonLeft released
-227.1250000000	1.0000000000	27255	MouseButtonLeft pressed
-227.2500000000	1.0000000000	27270	MouseButtonLeft released
-231.7833333333	1.0000000000	27814	MouseButtonLeft pressed
-231.9000000000	1.0000000000	27828	MouseButtonLeft released
-237.9333333333	1.0000000000	28552	MouseButtonLeft pressed
-238.0666666667	1.0000000000	28568	MouseButtonLeft released
-241.0750000000	1.0000000000	28929	MouseButtonLeft pressed
-241.2083333333	1.0000000000	28945	MouseButtonLeft released
-243.9916666667	1.0000000000	29279	MouseButtonLeft pressed
-244.1416666667	1.0000000000	29297	MouseButtonLeft released
-252.2666666667	1.0000000000	30272	MouseButtonLeft pressed
-252.4250000000	1.0000000000	30291	MouseButtonLeft released
-256.3333333333	1.0000000000	30760	MouseButtonLeft pressed
-256.4833333333	1.0000000000	30778	MouseButtonLeft released
-260.1666666667	1.0000000000	31220	MouseButtonLeft pressed
-260.2916666667	1.0000000000	31235	MouseButtonLeft released
-262.9166666667	1.0000000000	31550	MouseButtonLeft pressed
-263.1000000000	1.0000000000	31572	MouseButtonLeft released
-266.3000000000	1.0000000000	31956	MouseButtonLeft pressed
-266.4166666667	1.0000000000	31970	MouseButtonLeft released
-270.1583333333	1.0000000000	32419	MouseButtonLeft pressed
-270.3000000000	1.0000000000	32436	MouseButtonLeft released
-279.9916666667	1.0000000000	33599	MouseButtonLeft pressed
-11.1500000000	1.0000000000	1338	fixation_cross
-146.7333333333	1.0000000000	17608	Category:IMG=ID:FYLLADIO_1.tif=Type:Leaflet_Images_1
-169.8750000000	1.0000000000	20385	Category:IMG=ID:FYLLADIO_2.tif=Type:Leaflet_Images_1
-192.5916666667	1.0000000000	23111	Category:IMG=ID:FYLLADIO_3.tif=Type:Leaflet_Images_1
-206.6916666667	1.0000000000	24803	Category:IMG=ID:FYLLADIO_4.tif=Type:Leaflet_Images_1
-222.8833333333	1.0000000000	26746	Category:IMG=ID:FYLLADIO_5.tif=Type:Leaflet_Images_1
-246.1166666667	1.0000000000	29534	Category:IMG=ID:FYLLADIO_6.tif=Type:Leaflet_Images_1
-271.6500000000	1.0000000000	32598	Category:IMG=ID:FYLLADIO_1.tif=Type:Leaflet_Images_1
-279.9916666667	1.0000000000	33599	EOE
-279.9916666667	1.0000000000	33599	Category:IMG=ID:FYLLADIO_1.tif=Type:Leaflet_Images_1
+onset	duration	sample	value	event_class	stim_id	stim_category
+135.0250000000	1.0000000000	16203	MouseButtonLeft pressed	response	n/a	n/a
+135.1000000000	1.0000000000	16212	MouseButtonLeft released	response	n/a	n/a
+151.4416666667	1.0000000000	18173	MouseButtonLeft pressed	response	n/a	n/a
+151.5250000000	1.0000000000	18183	MouseButtonLeft released	response	n/a	n/a
+155.8666666667	1.0000000000	18704	MouseButtonLeft pressed	response	n/a	n/a
+156.0000000000	1.0000000000	18720	MouseButtonLeft released	response	n/a	n/a
+157.1333333333	1.0000000000	18856	MouseButtonLeft pressed	response	n/a	n/a
+157.2583333333	1.0000000000	18871	MouseButtonLeft released	response	n/a	n/a
+163.4166666667	1.0000000000	19610	MouseButtonLeft pressed	response	n/a	n/a
+163.5583333333	1.0000000000	19627	MouseButtonLeft released	response	n/a	n/a
+167.5666666667	1.0000000000	20108	MouseButtonLeft pressed	response	n/a	n/a
+167.6916666667	1.0000000000	20123	MouseButtonLeft released	response	n/a	n/a
+173.0000000000	1.0000000000	20760	MouseButtonLeft pressed	response	n/a	n/a
+173.1083333333	1.0000000000	20773	MouseButtonLeft released	response	n/a	n/a
+180.0666666667	1.0000000000	21608	MouseButtonLeft pressed	response	n/a	n/a
+180.1833333333	1.0000000000	21622	MouseButtonLeft released	response	n/a	n/a
+183.1916666667	1.0000000000	21983	MouseButtonLeft pressed	response	n/a	n/a
+183.2833333333	1.0000000000	21994	MouseButtonLeft released	response	n/a	n/a
+183.7916666667	1.0000000000	22055	MouseButtonLeft pressed	response	n/a	n/a
+183.8583333333	1.0000000000	22063	MouseButtonLeft released	response	n/a	n/a
+184.3833333333	1.0000000000	22126	MouseButtonLeft pressed	response	n/a	n/a
+184.4833333333	1.0000000000	22138	MouseButtonLeft released	response	n/a	n/a
+189.3583333333	1.0000000000	22723	MouseButtonLeft pressed	response	n/a	n/a
+189.5083333333	1.0000000000	22741	MouseButtonLeft released	response	n/a	n/a
+191.2416666667	1.0000000000	22949	MouseButtonLeft pressed	response	n/a	n/a
+191.3583333333	1.0000000000	22963	MouseButtonLeft released	response	n/a	n/a
+195.1166666667	1.0000000000	23414	MouseButtonLeft pressed	response	n/a	n/a
+195.2250000000	1.0000000000	23427	MouseButtonLeft released	response	n/a	n/a
+196.8500000000	1.0000000000	23622	MouseButtonLeft pressed	response	n/a	n/a
+196.9583333333	1.0000000000	23635	MouseButtonLeft released	response	n/a	n/a
+199.6666666667	1.0000000000	23960	MouseButtonLeft pressed	response	n/a	n/a
+199.7750000000	1.0000000000	23973	MouseButtonLeft released	response	n/a	n/a
+200.4000000000	1.0000000000	24048	MouseButtonLeft pressed	response	n/a	n/a
+200.4750000000	1.0000000000	24057	MouseButtonLeft released	response	n/a	n/a
+200.9916666667	1.0000000000	24119	MouseButtonLeft pressed	response	n/a	n/a
+201.0833333333	1.0000000000	24130	MouseButtonLeft released	response	n/a	n/a
+205.2333333333	1.0000000000	24628	MouseButtonLeft pressed	response	n/a	n/a
+205.3416666667	1.0000000000	24641	MouseButtonLeft released	response	n/a	n/a
+210.6750000000	1.0000000000	25281	MouseButtonLeft pressed	response	n/a	n/a
+210.8416666667	1.0000000000	25301	MouseButtonLeft released	response	n/a	n/a
+213.7750000000	1.0000000000	25653	MouseButtonLeft pressed	response	n/a	n/a
+213.9000000000	1.0000000000	25668	MouseButtonLeft released	response	n/a	n/a
+217.9333333333	1.0000000000	26152	MouseButtonLeft pressed	response	n/a	n/a
+218.0583333333	1.0000000000	26167	MouseButtonLeft released	response	n/a	n/a
+221.8666666667	1.0000000000	26624	MouseButtonLeft pressed	response	n/a	n/a
+222.0166666667	1.0000000000	26642	MouseButtonLeft released	response	n/a	n/a
+227.1250000000	1.0000000000	27255	MouseButtonLeft pressed	response	n/a	n/a
+227.2500000000	1.0000000000	27270	MouseButtonLeft released	response	n/a	n/a
+231.7833333333	1.0000000000	27814	MouseButtonLeft pressed	response	n/a	n/a
+231.9000000000	1.0000000000	27828	MouseButtonLeft released	response	n/a	n/a
+237.9333333333	1.0000000000	28552	MouseButtonLeft pressed	response	n/a	n/a
+238.0666666667	1.0000000000	28568	MouseButtonLeft released	response	n/a	n/a
+241.0750000000	1.0000000000	28929	MouseButtonLeft pressed	response	n/a	n/a
+241.2083333333	1.0000000000	28945	MouseButtonLeft released	response	n/a	n/a
+243.9916666667	1.0000000000	29279	MouseButtonLeft pressed	response	n/a	n/a
+244.1416666667	1.0000000000	29297	MouseButtonLeft released	response	n/a	n/a
+252.2666666667	1.0000000000	30272	MouseButtonLeft pressed	response	n/a	n/a
+252.4250000000	1.0000000000	30291	MouseButtonLeft released	response	n/a	n/a
+256.3333333333	1.0000000000	30760	MouseButtonLeft pressed	response	n/a	n/a
+256.4833333333	1.0000000000	30778	MouseButtonLeft released	response	n/a	n/a
+260.1666666667	1.0000000000	31220	MouseButtonLeft pressed	response	n/a	n/a
+260.2916666667	1.0000000000	31235	MouseButtonLeft released	response	n/a	n/a
+262.9166666667	1.0000000000	31550	MouseButtonLeft pressed	response	n/a	n/a
+263.1000000000	1.0000000000	31572	MouseButtonLeft released	response	n/a	n/a
+266.3000000000	1.0000000000	31956	MouseButtonLeft pressed	response	n/a	n/a
+266.4166666667	1.0000000000	31970	MouseButtonLeft released	response	n/a	n/a
+270.1583333333	1.0000000000	32419	MouseButtonLeft pressed	response	n/a	n/a
+270.3000000000	1.0000000000	32436	MouseButtonLeft released	response	n/a	n/a
+279.9916666667	1.0000000000	33599	MouseButtonLeft pressed	response	n/a	n/a
+11.1500000000	1.0000000000	1338	fixation_cross	marker	n/a	n/a
+146.7333333333	1.0000000000	17608	Category:IMG=ID:FYLLADIO_1.tif=Type:Leaflet_Images_1	stimulus	FYLLADIO_1.tif	Leaflet_Images_1
+169.8750000000	1.0000000000	20385	Category:IMG=ID:FYLLADIO_2.tif=Type:Leaflet_Images_1	stimulus	FYLLADIO_2.tif	Leaflet_Images_1
+192.5916666667	1.0000000000	23111	Category:IMG=ID:FYLLADIO_3.tif=Type:Leaflet_Images_1	stimulus	FYLLADIO_3.tif	Leaflet_Images_1
+206.6916666667	1.0000000000	24803	Category:IMG=ID:FYLLADIO_4.tif=Type:Leaflet_Images_1	stimulus	FYLLADIO_4.tif	Leaflet_Images_1
+222.8833333333	1.0000000000	26746	Category:IMG=ID:FYLLADIO_5.tif=Type:Leaflet_Images_1	stimulus	FYLLADIO_5.tif	Leaflet_Images_1
+246.1166666667	1.0000000000	29534	Category:IMG=ID:FYLLADIO_6.tif=Type:Leaflet_Images_1	stimulus	FYLLADIO_6.tif	Leaflet_Images_1
+271.6500000000	1.0000000000	32598	Category:IMG=ID:FYLLADIO_1.tif=Type:Leaflet_Images_1	stimulus	FYLLADIO_1.tif	Leaflet_Images_1
+279.9916666667	1.0000000000	33599	EOE	marker	n/a	n/a
+279.9916666667	1.0000000000	33599	Category:IMG=ID:FYLLADIO_1.tif=Type:Leaflet_Images_1	stimulus	FYLLADIO_1.tif	Leaflet_Images_1
